@@ -1,6 +1,7 @@
 # Contributing
 
 ##Git Rebase Workflow : A Summary(in korean)
+
 1. git checkout master
 
 2. git pull --rebase upstream master
@@ -23,11 +24,23 @@
     *push를 하기 전에 upstream(원래 repo)에 있는 정보들을 전부 최신화 해 주기
     *반드시 모든 local change를 커밋한 후 실행할 것!
 
+-----------------**---------여기서 CONFLICT가 일어날 경우-----------**----------------
+    5-1. 이 때 conflict가 일어난다는 것은, 4에서 수정했던 파일을 다른 Contributor가 수정하여 Pull request를 날렸다는 의미이다.
+         먼저 Conflict가 일어난 파일로 가서 수정을 해 준다.
+    5-2. 그리고 git add 를 해 준다.
+    5-3. git rebase --continue 를 입력한다.
+    5-4. 이 과정을 충돌이 일어난 개수만큼 반복한다.
+    5-5. CONFLICT가 해결되었다.
+-----------------**--------------------------------------------**----------------
+
 6. git push origin feature-branch
-    **push origin master를 하면 안됨.
+    **push origin master를 하면 안된다. 반드시 작업한 해당 branch에 Pull Request를 날릴 것 !
 
 7. Submit PR
     ** 자기자신이 pullrequest를 받지 말고, 반드시 타인이 Review를 한 후 실행하도록 함.
+
+
+
 
 
 
